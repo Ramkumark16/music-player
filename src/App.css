@@ -1,0 +1,113 @@
+.music-player-container {
+  display: flex;
+  height: 100vh;
+  background-color: #101010;
+  color: white;
+  font-family: 'Circular Std', sans-serif;
+}
+
+/* 🎵 Left Side - Song List & Favourites */
+.sidebar {
+  width: 270px;
+  padding: 20px;
+  background: #1a1a1a;
+  overflow-y: auto;
+  border-right: 2px solid #282828;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.song-list, .favourites {
+  flex-grow: 1;
+}
+
+.song-list h2, .favourites h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1DB954;
+}
+
+.song-list ul, .favourites ul {
+  list-style: none;
+  padding: 0;
+}
+
+.song-list li, .favourites li {
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 8px;
+}
+
+.song-list li:hover, .favourites li:hover {
+  background: #303030;
+  transform: scale(1.02);
+}
+
+.song-list .active, .favourites .active {
+  background: #1DB954;
+  color: white;
+  font-weight: bold;
+}
+
+/* ❤️ Favourites Section */
+.favourites {
+  padding-top: 15px;
+  border-top: 2px solid #282828;
+}
+
+.favourites li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fav-icon {
+  color: #1DB954;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.fav-icon:hover {
+  color: #17a748;
+  transform: scale(1.2);
+}
+
+/* 🎶 Right Side - Music Player */
+.player {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heading {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* 🔊 Controls */
+.controls {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.music-btn {
+  background: #1DB954;
+  border: none;
+  padding: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 10px rgba(29, 185, 84, 0.5);
+}
+
+.music-btn:hover {
+  background: #17a748;
+  transform: scale(1.1);
+}
